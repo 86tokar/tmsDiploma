@@ -1,0 +1,32 @@
+{
+
+  "devDependencies": {
+  
+    "ts-node": "^10.9.2"
+  },
+  "name": "diploma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test_mocha": "mocha --config='./unit/.mocharc.json'"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://git@github.com:86tokar/tmsDiploma.git"
+  },
+  "author": "",
+  "license": "ISC",
+ 
+  "description": "",
+  "dependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.12.12",
+    "chai": "^4.4.1",
+    "mocha": "^10.4.0",
+    "tsc-init": "^2.1.0",
+    "typescript": "^5.3.3"
+  }
+}
+
