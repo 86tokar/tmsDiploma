@@ -5,7 +5,7 @@ import PageFactory from '../src/page-objects/pageFactory';
 
 test.describe.configure({ mode: 'serial', retries: 0 });
 test.describe('First block', () => {
-  test('Home page title', async ({ page }) => {
+  test.only('Home page title', async ({ page }) => {
     // const homePage = new HomePage(page);
     const homePage = PageFactory.getPage(page, 'HomePage') as HomePage;
     await homePage.openPage();

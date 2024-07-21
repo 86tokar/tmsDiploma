@@ -19,12 +19,12 @@ export default defineConfig({
   expect: {
     timeout: 12000,
   },
-  reporter: [
-    [
-      'html',
-      { outputFolder: path.resolve(__dirname, 'Playwright/playwright-report') },
-    ],
-  ],
+  // reporter: [
+  //   [
+  //     'html',
+  //     { outputFolder: path.resolve(__dirname, 'Playwright/playwright-report') },
+  //   ],
+  // ],
   outputDir: 'Playwright/test-results',
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
@@ -34,10 +34,16 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
+    
     [
-      'html',
-      { outputFolder: path.resolve(__dirname, 'Playwright/playwright-report') },
-    ],
+      
+      "allure-playwright",
+      {
+        detail: true,
+        outputFolder: "./Playwright/reports/allure-results",
+      }
+    ]
+   
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {

@@ -1,6 +1,8 @@
 {
   "devDependencies": {
     "@playwright/test": "^1.45.2",
+    "allure-commandline": "^2.29.0",
+    "allure-playwright": "^3.0.0-beta.7",
     "ts-node": "^10.9.2"
   },
   "name": "diploma",
@@ -9,7 +11,8 @@
   "scripts": {
     "test_mocha": "mocha --config='./unit/.mocharc.json'",
     "test_API": "jest --config='./API/jest.config.js'",
-    "test_Playwright": "playwright test --config=./playwright.config.ts"
+    "test_Playwright": "playwright test --config=./playwright.config.ts",
+    "run_Allure": "allure generate allure-results"
   },
   "repository": {
     "type": "git",
