@@ -12,7 +12,7 @@
     "test_mocha": "mocha --config='./unit/.mocharc.json'",
     "test_API": "jest --config='./API/jest.config.js'",
     "test_Playwright": "playwright test --config=./playwright.config.ts",
-    "run_Allure": "allure generate allure-results"
+    "run_Allure": "allure generate allure-results --clean -o ./Playwright/reports/allure-report && allure open ./Playwright/reports/allure-report"
   },
   "repository": {
     "type": "git",
